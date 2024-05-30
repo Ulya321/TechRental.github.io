@@ -1,0 +1,288 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F6DCAC;
+    color: #01204E;
+}
+
+header {
+    background-color: #01204E;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #FEAE6F;
+    color: #01204E;
+}
+
+.cover {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #028391;
+    color: white;
+    overflow: hidden;
+}
+
+.cover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cover-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.cover-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FEAE6F;
+    color: #01204E;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.button:hover {
+    background-color: #F6DCAC;
+    color: #01204E;
+}
+
+.blob {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: #FEAE6F;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+
+/* Container produk dengan flexbox */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Agar kotak produk membungkus ke baris berikutnya jika terlalu banyak */
+    justify-content: space-around; /* Menyebarkan kotak produk secara merata */
+    padding: 20px;
+    background-color: #F6DCAC;
+    border-radius: 10px;
+}
+
+/* Container pembungkus untuk overflow scroll */
+.product-container-wrapper {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease;
+}
+
+
+.product {
+    width: 250px;
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+ 
+}
+
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+.product:hover {
+    transform: translateY(-5px);
+    background-color: #F6DCAC;
+}
+
+/* Section Tentang Kami */
+#tentang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    background-color: #01204E;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tentang-header {
+    text-align: center;
+    max-width: 800px;
+}
+
+.tentang-header h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tentang-header p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: #F6DCAC;
+}
+
+/* Section Ulasan */
+#ulasan {
+    padding: 50px 20px;
+    background-color: #F6DCAC;
+}
+
+.review {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.review p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.review-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+}
+
+.rating {
+    color: #FFD700; /* Warna bintang emas */
+}
+
+.review-date {
+    color: #555;
+}
+
+/* Tombol Tambah Ulasan */
+.add-review-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #028391;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-review-btn:hover {
+    background-color: #FEAE6F;
+}
+
+footer {
+    background-color: #01204E;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .cover-content h2 {
+        font-size: 2em;
+    }
+}
